@@ -1507,6 +1507,14 @@ var PartialEvaluator = (function PartialEvaluatorClosure() {
         }
 
         // Do final text scaling
+        var font = textState.font;
+        if (font) {
+          if (font.vertical) {
+            textContentItem.height *= textContentItem.textAdvanceScale;
+          } else {
+            textContentItem.width *= textContentItem.textAdvanceScale;
+          }
+        }
         textContentItem.width *= textContentItem.textAdvanceScale;
         textContentItem.height *= textContentItem.textAdvanceScale;
         textContent.items.push(runBidiTransform(textContentItem));
