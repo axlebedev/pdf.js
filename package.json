@@ -1,5 +1,5 @@
 {
-  "name": "pdf.js",
+  "name": "@pdffiller/pdfjs",
   "version": "2.0.0-issue8276",
   "devDependencies": {
     "@babel/core": "^7.2.2",
